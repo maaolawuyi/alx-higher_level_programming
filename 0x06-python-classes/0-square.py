@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-class Square(Object):
+class Square(object):
     pass
+
