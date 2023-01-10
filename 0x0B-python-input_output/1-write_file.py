@@ -12,11 +12,12 @@ def number_of_lines(filename=""):
         filename: filename
 
     Raises
-        Exception: when the file can be opened
-
+        Exception: when the file can be opene
     """
-    n_lines = 0
     with open(filename, 'r', encoding="utf-8") as f:
-        for line in f:
-            n_lines += 1
-    return n_lines
+        data = f.read()
+        n_lines = 0
+        for i in range(len(data)):
+            if data[i] == "\n":
+                n_lines += 1
+        return n_lines
