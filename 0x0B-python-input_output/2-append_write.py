@@ -14,14 +14,10 @@ def read_lines(filename="", nb_lines=0):
 
     """
 
-    with open(filename, 'r', encoding="utf-8") as f:
+    with open(filename, 'r', encoding="utf-8") as file:
         if nb_lines <= 0:
-            read_data = f.read()
-            print(read_data, end='')
+            print(file.read(), end="")
         else:
-            n_lines = 0
-            for line in f:
-                print(line, end='')
-                n_lines += 1
-                if n_lines == nb_lines:
-                    break
+            for i in range(nb_lines):
+                print(file.readline(), end="")
+
